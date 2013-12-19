@@ -50,7 +50,7 @@ var app = {
         
         // Update content
         var content = document.getElementsByClassName("content")[0];
-        
+        content.style.height = (height - content.offsetTop) + "px";
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
