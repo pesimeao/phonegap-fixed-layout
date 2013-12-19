@@ -47,6 +47,10 @@ var app = {
         width = document.documentElement.clientWidth;
         height = document.documentElement.clientHeight;
         logDimensions(width,height);
+        
+        // Update content
+        var content = document.getElementsByClassName("content")[0];
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
