@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6284DDAA-D2F3-4F0C-917D-86B6E685C35A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>phonegap-fixed-layout</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>903D5A45-6A88-4DC7-BC17-FF2A896E03E2</key>
+		<string>https://github.com/pesimeao/phonegap-fixed-layout.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/phonegap-fixed-layout.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>903D5A45-6A88-4DC7-BC17-FF2A896E03E2</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pesimeao/phonegap-fixed-layout.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>903D5A45-6A88-4DC7-BC17-FF2A896E03E2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>903D5A45-6A88-4DC7-BC17-FF2A896E03E2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>phonegap-fixed-layout</string>
+		</dict>
+	</array>
+</dict>
+</plist>
