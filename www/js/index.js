@@ -19,7 +19,18 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        // Block scrolling
+        document.body.addEventListener("touchmove", function(e) {
+            e.preventDefault();
+        }, false);
+        //window.onscroll = function () { window.scrollTo(0, 0); };
+        //document.ontouchmove = function(e) { e.preventDefault(); };
+        
+        // Bind all other events
         this.bindEvents();
+        
+        // Install scroll
+        //Scroller(document.getElementsByClassName("content")[0]);
     },
     // Bind Event Listeners
     //
@@ -27,7 +38,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        window.addEventListener('resize', this.onResize, false);
+        //window.addEventListener('resize', this.onResize, false);
+        //window.addEventListener('updateSize', this.onResize, false);
     },
     // Fire Events
     fireEvent: function(name) {
@@ -45,6 +57,8 @@ var app = {
         Keyboard.shrinkView(true);
         Keyboard.hideFormAccessoryBar(false);
         Keyboard.disableScrollingInShrinkView(false);
+        
+        document.body.style.height(window.innerHeight);
     },
     // onResize
     onResize: function() {

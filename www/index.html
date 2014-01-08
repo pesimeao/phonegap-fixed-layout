@@ -32,7 +32,61 @@
             <div class="header">
                 <ng-include src="'partials/header.html'"></ng-include>
             </div>
-            <div ng-view class="content" style="overflow: scroll;"></div>
+            <div class="content-frame" id="wrapper">
+                <div>
+    <p>Caixa de procura:</p>
+    <input type="search" value="" placeholder="search" class="topcoat-search-input" id="input0">
+    <p>Imagem:</p>
+    <img src="img/dialog-zone-bg.png" width="90%" class="center" onclick="window.myScroll.refresh();" />
+    <p>Texto:</p>
+    <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.</p>
+    <p>Mais caixas de seleção:</p>
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input">
+      <div class="topcoat-switch__toggle"></div>
+    </label>
+    <br>
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input" checked>
+      <div class="topcoat-switch__toggle"></div>
+    </label>
+    <br>
+    <label class="topcoat-switch">
+      <input type="checkbox" class="topcoat-switch__input" disabled>
+      <div class="topcoat-switch__toggle"></div>
+    </label>
+    <p>Inputs:</p>
+    <input type="text" class="topcoat-text-input input1" placeholder="text" value="" id="input1">
+    <br>
+    <br>
+    <input type="text" class="topcoat-text-input" placeholder="text" value="" disabled>
+    <br>
+    <br>
+    <input type="text" class="topcoat-text-input" placeholder="text" value="fail" pattern="not-fail" id="input2">
+    <p>Radio button</p>
+    <label class="topcoat-radio-button">
+      <input type="radio" name="topcoat">
+      <div class="topcoat-radio-button__checkmark"></div>
+      Right label
+    </label>
+    <p>Lista:</p>
+    <div class="topcoat-list">
+      <h3 class="topcoat-list__header">Category</h3>
+      <ul class="topcoat-list__container">
+        <li class="topcoat-list__item">
+          Item 1
+        </li>
+        <li class="topcoat-list__item">
+          Item 2
+        </li>
+        <li class="topcoat-list__item">
+          Item 3
+        </li>
+      </ul>
+        <input type="text" class="topcoat-text-input" placeholder="text" value="" id="input3">
+    </div>
+</div>
+            </div>
             <div class="footer">
                 <ng-include src="'partials/footer.html'"></ng-include>
             </div>
@@ -45,12 +99,26 @@
         <script type="text/javascript" src="lib/angular/angular.min.js"></script>
         <script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
         <script type="text/javascript" src="lib/angular-touch/angular-touch.min.js"></script>
+        <script type="text/javascript" src="lib/iscroll.js"></script>
         <!-- App -->
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/controller.js"></script>
+        <script type="text/javascript" src="js/scroll2.js"></script>
             
         <script type="text/javascript">
             app.initialize();
+            window.myScroll = new iScroll('wrapper', {
+                bounce:true,
+                momentum:true,
+                onBeforeScrollStart: function(e) {                
+                    var target = e.target;
+            
+                    while (target.nodeType != 1) target = target.parentNode;
+                    if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
+                        //e.preventDefault();
+                    }
+               }
+            });
         </script>
     </body>
 </html>
