@@ -56,6 +56,10 @@
                 input: "="
             },
             link: function(scope, element, attrs, ctrl) {
+                setTimeout(function(){
+                        window.myScroll.refresh();
+                },200);
+                
                 if (attrs.id === undefined)
                     return;
                 
